@@ -67,6 +67,7 @@ while True:
                 writer.writerow(attendance)
             csvfile.close()
     if k==ord('q'):
+        speak("Closing Software..")
         break
 video.release()
 cv2.destroyAllWindows()
