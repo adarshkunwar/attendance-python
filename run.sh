@@ -6,8 +6,9 @@ do
             python3 add_faces.py
             ;;
         "record")
-            python3 converter.py
-            ./index.html
+            echo "open index.html"
+            # python3 converter.py
+            # ./index.html
             # python3 -m streamlit run app.py
             ;;
         "run")

@@ -1,28 +1,49 @@
+import * as fs from 'fs';
 document.addEventListener("DOMContentLoaded", function () {
   // Sample data array, replace this with your actual data
-  const mapArrayData = [
-    { id: 1, name: "John Doe", position: "Manager", role: "Admin" },
-    { id: 2, name: "Jane Doe", position: "Salesman", role: "User" },
-    { id: 3, name: "Alice Smith", position: "Engineer", role: "User" },
-    { id: 4, name: "Bob Johnson", position: "Developer", role: "Admin" },
-    { id: 5, name: "Eva Williams", position: "Designer", role: "User" },
-    { id: 6, name: "Chris Brown", position: "Analyst", role: "User" },
-    {
-      id: 7,
-      name: "Olivia White",
-      position: "Marketing Specialist",
-      role: "User",
-    },
-    {
-      id: 8,
-      name: "Daniel Miller",
-      position: "Project Manager",
-      role: "Admin",
-    },
-    { id: 9, name: "Sophia Davis", position: "Customer Support", role: "User" },
-    { id: 10, name: "Matthew Taylor", position: "HR Manager", role: "Admin" },
-  ];
 
+  // read files from './Attendance/Attendance_28-11-2023.csv' and display it as an array.
+
+  // const { warn } = require('console');
+
+  const path = './Attendance/Attendance_02-12-2023.csv';
+
+  var readData;
+
+  fs.readFile(path, 'utf8', (err, data) => {
+    if (err) throw err;
+    readData = data;
+
+    // console.log(readData.split('\n'));
+
+    // read the data and only allow the strings that have a comma in them.
+    var arr = readData.split('\n');
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].includes(',')) {
+        newArr.push(arr[i]);
+      }
+    }
+
+
+    finalArr = [];
+
+    for (var i = 0; i < newArr.length; i++) {
+      tempData = newArr[i].split(",");
+      tempObj = {
+        name: tempData[0].replaceAll('\r', ''),
+        age:tempData[1].replaceAll('\r', ''),
+        job:tempData[2].replaceAll('\r', ''),
+        time: tempData[3].replaceAll('\r', '')
+
+      }
+      finalArr.push(tempObj);
+    }
+
+    console.log(finalArr);
+
+  });
+  
   const tableBody = document.getElementById("tableBody");
   const searchInput = document.getElementById("searchInput");
 
