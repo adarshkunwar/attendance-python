@@ -5,7 +5,8 @@ body{
     position: relative;
     width: 85%;
     margin: 0 auto;
-    background-color: #f3fafe;
+    background-color: #f8fafc;
+    color: #000000;
 }
 #searchInput {
      
