@@ -1,6 +1,3 @@
-import data from "../json/Attendance.json";
-
-console.log(data);
 document.addEventListener("DOMContentLoaded", function () {
   // Sample data array, replace this with your actual data
   const mapArrayData = [
