@@ -1,9 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Sample data array, replace this with your actual data
   const mapArrayData = [
-    { id: 1, name: "John Doe", email: "john@example.com", role: "Admin" },
-    { id: 2, name: "Jane Doe", email: "jane@example.com", role: "User" },
-    // Add more data as needed
+    { id: 1, name: "John Doe", position: "Manager", role: "Admin" },
+    { id: 2, name: "Jane Doe", position: "Salesman", role: "User" },
+    { id: 3, name: "Alice Smith", position: "Engineer", role: "User" },
+    { id: 4, name: "Bob Johnson", position: "Developer", role: "Admin" },
+    { id: 5, name: "Eva Williams", position: "Designer", role: "User" },
+    { id: 6, name: "Chris Brown", position: "Analyst", role: "User" },
+    {
+      id: 7,
+      name: "Olivia White",
+      position: "Marketing Specialist",
+      role: "User",
+    },
+    {
+      id: 8,
+      name: "Daniel Miller",
+      position: "Project Manager",
+      role: "Admin",
+    },
+    { id: 9, name: "Sophia Davis", position: "Customer Support", role: "User" },
+    { id: 10, name: "Matthew Taylor", position: "HR Manager", role: "Admin" },
   ];
 
   const tableBody = document.getElementById("tableBody");

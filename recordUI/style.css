@@ -34,7 +34,7 @@ h1{
 }
 
 #searchInput:focus {
-    border-color: #4CAF50;
+    border-color: #239ae9;
     color: black;
 }
 
@@ -47,17 +47,17 @@ table {
     border-collapse: collapse;
     font-family: serif;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
 }
 
 
 th,
 td {
-    padding: 11px;
+    padding: 12px 12px;
     text-align: center;
-    font-size: 18px;
-    border-bottom: 1px solid #ddd;
-    border: 1px solid rgb(112, 110, 110);
+    font-weight: 200;
+    /* border-bottom: 1px solid #ddd;
+    border: 1px solid rgb(112, 110, 110); */
 }
 
 th{
@@ -66,16 +66,30 @@ th{
 }
 
 td{
-    font-size: 16px;
+    font-size: 16.5px;
 }
 
 thead {
-    background-color: #3498db;
+    background-color: #239ae9;
     color: white;
 }
 
-tbody tr:hover {
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    font-weight: bold;
+    /* Color for odd rows */
+}
+
+tbody tr:nth-child(even) {
     background-color: #f5f5f5;
+    font-weight: bold;
+     
+    /* Color for even rows */
+}
+
+tbody tr:hover {
+    background-color: #d3d3d3;
+   
 }
 
 /* Responsive design */
