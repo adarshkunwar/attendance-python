@@ -8,7 +8,7 @@ date = datetime.fromtimestamp(ts).strftime("%d-%m-%Y")
 timestamp = datetime.fromtimestamp(ts).strftime("%H:%M-%S")
 
 # Use raw string (r) to avoid escape characters
-csvFilePath = './Attendance/Attendance_04-12-2023.csv'
+csvFilePath = './Attendance/Attendance_07-12-2023.csv'
 jsonFilePath = './recordUI/data.js'
 
 # Function to convert a CSV to a JavaScript array of objects

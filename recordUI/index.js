@@ -1,5 +1,5 @@
 import { data } from "./data.js";
-
+console.log("this runs")
 document.addEventListener("DOMContentLoaded", function () {
   const tableBody = document.getElementById("tableBody");
   const searchInput = document.getElementById("searchInput");
@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Add other columns
       Object.values(rowData).forEach((value) => {
+        console.log(value)
         const cell = document.createElement("td");
         cell.textContent = value;
         row.appendChild(cell);
